@@ -3,7 +3,7 @@
 Personal portfolio website showcasing data science and web development projects.
 
 ## Technologies
-- HTML5, CSS3, JavaScript
+- HTML5, CSS, JavaScript
 - Font Awesome, Google Fonts
 - AOS animations
 
