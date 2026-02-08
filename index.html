@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumisani Mabhugu | Data Scientist & Developer</title>
+    <meta name="description"
+        content="Portfolio of Dumisani Mabhugu, a Data Scientist specializing in Machine Learning, AI, and Full-Stack Development.">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Dumisani Mabhugu | Data Scientist">
+    <meta property="og:description"
+        content="Building intelligent data solutions and accessible web experiences. Check out my projects and resume.">
+    <meta property="og:image" content="C:\Users\User\Desktop\PORT\IMG_20251104_121210434.jpg">
+    <meta property="og:url" content="https://dumi-portfolio.com">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-body: #0a192f;
+            --bg-nav: #112240;
+            --text-main: #ccd6f6;
+            --text-secondary: #8892b0;
+            --accent: #64ffda;
+            --accent-gold: #ffd700;
+            --hover-bg: rgba(100, 255, 218, 0.1);
+            --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            --shadow-card: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-body);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #495670;
+            border-radius: 5px;
+            border: 2px solid var(--bg-body);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #e6f1ff;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Calistoga', serif;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* Layout Structure */
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            background-color: var(--bg-nav);
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 100;
+            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-summary {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-img-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            padding: 3px;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #233554;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .profile-title {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            color: var(--text-secondary);
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .nav-link i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent);
+            background: var(--hover-bg);
+            transform: translateX(5px);
+        }
+
+        .nav-link.active {
+            border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: auto;
+        }
+
+        .social-link {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 280px;
+            flex: 1;
+            padding: 4rem 6rem;
+            max-width: 1200px;
+        }
+
+        section {
+            padding: 4rem 0 6rem;
+            min-height: 80vh;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-number {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            position: relative;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 300px;
+            height: 1px;
+            background: #233554;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-left: 20px;
+        }
+
+        /* Hero Section */
+        #hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+            padding-top: 0;
+        }
+
+        .hero-pre {
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .hero-name {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #e6f1ff 0%, #8892b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-tag {
+            font-size: clamp(2rem, 5vw, 4rem);
+            color: var(--text-secondary);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .hero-text {
+            max-width: 540px;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border: 2px solid var(--accent);
+            border-radius: 4px;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 600;
+            background: transparent;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background: var(--hover-bg);
+            transform: translateY(-3px);
+            box-shadow: 4px 4px 0 0 var(--accent);
+        }
+
+        /* Tech Stack Marquee */
+        .tech-marquee-container {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 2rem;
+            padding: 1rem 0;
+            background: rgba(17, 34, 64, 0.5);
+            border-top: 1px solid #233554;
+            border-bottom: 1px solid #233554;
+        }
+
+        .tech-marquee-content {
+            display: flex;
+            gap: 3rem;
+            animation: marquee 20s linear infinite;
+            width: max-content;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-item {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .marquee-item i {
+            color: var(--accent);
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Resume Section */
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .resume-block {
+            margin-bottom: 3rem;
+        }
+
+        .resume-header {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .resume-header i {
+            margin-right: 15px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2.5rem;
+            border-left: 2px solid #233554;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--bg-body);
+            border: 2px solid var(--accent);
+        }
+
+        .timeline-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            color: #e6f1ff;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-subtitle {
+            color: var(--accent);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .cert-card {
+            background: #112240;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        /* Portfolio Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #112240;
+            border-radius: 10px;
+            padding: 2rem;
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .folder-icon {
+            color: var(--accent);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .project-links a {
+            color: var(--text-secondary);
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+
+        .project-links a:hover {
+            color: var(--accent);
+        }
+
+        .project-title {
+            color: #e6f1ff;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+
+        .project-card:hover .project-title {
+            color: var(--accent);
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-tech {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+
+        /* Contact & Footer */
+        .contact-box {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .mobile-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 200;
+            background: var(--bg-nav);
+            border: none;
+            color: var(--accent);
+            font-size: 1.8rem;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 1000px) {
+            .main-content {
+                padding: 4rem;
+            }
+
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title::after {
+                width: 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                transform: translateX(-100%);
+                width: 75%;
+                max-width: 300px;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+                box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 2rem;
+                width: 100%;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section-title::after {
+                display: none;
+            }
+
+            #hero {
+                align-items: flex-start;
+            }
+
+            .hero-name {
+                font-size: 3rem;
+            }
+
+            .hero-tag {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" aria-label="Toggle Navigation"
+        onclick="document.querySelector('.sidebar').classList.toggle('active')">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="wrapper">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" role="navigation">
+            <div>
+                <div class="profile-summary">
+                    <div class="profile-img-container">
+                        <img src="IMG_20251104_121210434.jpg" alt="Dumisani Mabhugu" class="profile-img">
+                    </div>
+                    <h3 class="profile-name">Dumisani</h3>
+                    <p class="profile-title">Data Scientist</p>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i>
+                            Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About Me</a>
+                    </li>
+                    <li class="nav-item"><a href="#resume" class="nav-link"><i class="fa-solid fa-file-lines"></i>
+                            Resume</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link"><i class="fa-solid fa-briefcase"></i>
+                            Work</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i>
+                            Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/dumi88571" class="social-link" target="_blank" aria-label="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dumisani-mabhugu-39ab3a2a5" class="social-link" target="_blank"
+                    aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/@manxungu" class="social-link" target="_blank" aria-label="Twitter"><i
+                        class="fa-brands fa-twitter"></i></a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Hero -->
+            <section id="hero" data-aos="fade-up">
+                <span class="hero-pre">Hi, my name is</span>
+                <h1 class="hero-name">Dumisani Mabhugu.</h1>
+                <h2 class="hero-tag">I build intelligent data solutions.</h2>
+                <p class="hero-text">
+                    I'm a Data Scientist and Developer specializing in building accessible, human-centered products and
+                    advanced machine learning models.
+                </p>
+                <div>
+                    <a href="#resume" class="btn">Check out my Resume</a>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about">
+                <div class="section-header" data-aos="fade-right">
+                    <span class="section-number">01.</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: start;"
+                    data-aos="fade-up">
+                    <div style="color: var(--text-secondary);">
+                        <p style="margin-bottom: 1rem;">
+                            Hello! My name is Dumisani and I enjoy creating things that live on the internet. My
+                            interest in data and web development started back in 2022 when I graduated High School —
+                            curiosity about how technology works turned into a full-blown passion.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Fast-forward to today, and I've had the privilege of working on <span
+                                class="mono">Agricultural ML models</span>, <span class="mono">Financial Sentiment
+                                Analysis</span>, <span class="mono">AI and Machine Learning</span>, <span
+                                class="mono">NLP and Computer Vision</span>, and <span class="mono">Data Analysis</span>
+                            projects. My main focus these days is building accessible, inclusive products and digital
+                            experiences.
+                        </p>
+                    </div>
+
+                    <div style="position: relative;">
+                        <div
+                            style="width: 100%; height: 300px; border-radius: 5px; background-color: var(--accent); overflow: hidden; position: relative;">
+                            <div
+                                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('IMG_20251104_121210434.jpg'); background-size: cover; background-position: center; mix-blend-mode: multiply; filter: grayscale(100%) contrast(1);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animated Tech Stack Marquee -->
+                <h3 style="margin-top: 3rem; margin-bottom: 1rem; font-size: 1.2rem; color: var(--text-main);">My Tech
+                    Stack</h3>
+                <div class="tech-marquee-container">
+                    <div class="tech-marquee-content">
+                        <!-- Duplicated items for seamless loop -->
+                        <span class="marquee-item"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="marquee-item"><i class="fa-solid fa-flask"></i> Flask</span>
+                        <span class="marquee-item"><i class="fa-brands fa-java"></i> Java</span>
+                        <span class="marquee-item"><i class="fa-solid fa-database"></i> SQL</span>
+                        <span class="marquee-item"><i class="fa-solid fa-brain"></i> TensorFlow</span>
+                        <span class="marquee-item"><i class="fa-solid fa-chart-simple"></i> Power BI</span>
+                        <span class="marquee-item"><i class="fa-solid fa-code"></i> C++</span>
+                        <span class="marquee-item"><i class="fa-solid fa-robot"></i> NLP</span>
+                        <span class="marquee-item"><i class="fa-brands fa-react"></i> React</span>
+
+                        <!-- Duplicate content start -->
+                        <span class="marquee-item"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="marquee-item"><i class="fa-solid fa-flask"></i> Flask</span>
+                        <span class="marquee-item"><i class="fa-brands fa-java"></i> Java</span>
+                        <span class="marquee-item"><i class="fa-solid fa-database"></i> SQL</span>
+                        <span class="marquee-item"><i class="fa-solid fa-brain"></i> TensorFlow</span>
+                        <span class="marquee-item"><i class="fa-solid fa-chart-simple"></i> Power BI</span>
+                        <span class="marquee-item"><i class="fa-solid fa-code"></i> C++</span>
+                        <span class="marquee-item"><i class="fa-solid fa-robot"></i> NLP</span>
+                        <span class="marquee-item"><i class="fa-brands fa-react"></i> React</span>
+                        <!-- Duplicate content end -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resume -->
+            <section id="resume">
+                <div class="section-header" data-aos="fade-right">
+                    <span class="section-number">02.</span>
+                    <h2 class="section-title">My Resume</h2>
+                </div>
+
+                <div class="resume-grid">
+                    <!-- Experience & Education -->
+                    <div data-aos="fade-up">
+                        <div class="resume-block">
+                            <h3 class="resume-header"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2023 - 2026 (Present)</div>
+                                <h4 class="timeline-title">BSc in Data Science</h4>
+                                <div class="timeline-subtitle">Adikavi Nannaya University, India</div>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                                    Relevant Coursework: Machine Learning, Database Management, Python Programming,
+                                    Statistical Analysis, Linear Algebra.
+                                </p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Graduated 2022</div>
+                                <h4 class="timeline-title">O-Level & A-Level</h4>
+                                <div class="timeline-subtitle">Gaza High School</div>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                                    Major in Biology, Geography, and Agriculture. Developed foundation in scientific
+                                    research methods.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="resume-block">
+                            <h3 class="resume-header"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Aug 2024 - Present</div>
+                                <h4 class="timeline-title">Lead Web Developer</h4>
+                                <div class="timeline-subtitle">Freelance</div>
+                                <ul
+                                    style="color: var(--text-secondary); font-size: 0.95rem; list-style-position: inside; margin-top: 0.5rem;">
+                                    <li>Implemented Python-based crop prediction system improving yield forecast
+                                        accuracy.</li>
+                                    <li>Built comprehensive dashboards using Tableau for various clients.</li>
+                                    <li>Built different web apps using machine learning models.</li>
+                                    <li>Developed responsive web applications using Flask.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications & Download -->
+                    <div data-aos="fade-left">
+                        <div class="resume-block">
+                            <h3 class="resume-header"><i class="fa-solid fa-certificate"></i> Certifications</h3>
+                            <div class="cert-card">
+                                <h4 style="color: #e6f1ff; font-size: 1.1rem; margin-bottom: 0.2rem;">Python for Data
+                                    Science</h4>
+                                <p class="mono" style="font-size: 0.8rem;">Infosys Certification</p>
+                            </div>
+                            <div class="cert-card">
+                                <h4 style="color: #e6f1ff; font-size: 1.1rem; margin-bottom: 0.2rem;">Cloud Computing
+                                    Fundamentals</h4>
+                                <p class="mono" style="font-size: 0.8rem;">Swayam Certification</p>
+                            </div>
+                            <div class="cert-card">
+                                <h4 style="color: #e6f1ff; font-size: 1.1rem; margin-bottom: 0.2rem;">AI and Machine
+                                    Learning</h4>
+                                <p class="mono" style="font-size: 0.8rem;">Ulearn Certification</p>
+                            </div>
+                            <div class="cert-card">
+                                <h4 style="color: #e6f1ff; font-size: 1.1rem; margin-bottom: 0.2rem;">SQL Fundamentals
+                                </h4>
+                                <p class="mono" style="font-size: 0.8rem;">DataCamp</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 3rem; text-align: center;">
+                            <!-- Linked to the specific file name -->
+                            <a href="Dumisani_ Mabhugu_CV.pdf" download class="btn"
+                                style="width: 100%; display: block; text-align: center;"
+                                aria-label="Download Resume PDF">
+                                <i class="fa-solid fa-download" style="margin-right: 10px;"></i> Download Full Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio">
+                <div class="section-header" data-aos="fade-right">
+                    <span class="section-number">03.</span>
+                    <h2 class="section-title">Some Things I've Built</h2>
+                </div>
+
+                <div class="project-grid" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Project 1: Sentiment Analysis -->
+                    <div class="project-card">
+                        <div>
+                            <div class="folder-icon">
+                                <i class="fa-regular fa-folder"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/dumi88571/Financial-Sentiment-Analysis" target="_blank"
+                                        aria-label="View Sentiment Analysis on GitHub"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Machine Learning Sentiment Analysis</h3>
+                            <p class="project-desc">NLP-based sentiment analysis using ML algorithms for text
+                                classification of financial news.</p>
+                        </div>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>NLP</li>
+                            <li>ML</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 2: Crop Prediction -->
+                    <div class="project-card">
+                        <div>
+                            <div class="folder-icon">
+                                <i class="fa-regular fa-folder"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/dumi88571/Crop-Prediction-App" target="_blank"
+                                        aria-label="View Crop Prediction on GitHub"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Crop Prediction Web App</h3>
+                            <p class="project-desc">Flask-based application for agricultural yield predictions using
+                                Random Forest and data science.</p>
+                        </div>
+                        <ul class="project-tech">
+                            <li>Flask</li>
+                            <li>Python</li>
+                            <li>ML</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 3: Full Stack Web App -->
+                    <div class="project-card">
+                        <div>
+                            <div class="folder-icon">
+                                <i class="fa-regular fa-folder"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/dumi88571/Data-projects/blob/main/app.py"
+                                        target="_blank" aria-label="View Full Stack App on GitHub"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Full-Stack Web Application</h3>
+                            <p class="project-desc">Modern web app with responsive design, interactive features, and
+                                seamless backend integration.</p>
+                        </div>
+                        <ul class="project-tech">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                        </ul>
+                    </div>
+
+
+
+                    <!-- Project 5: Agriculture Analysis -->
+                    <div class="project-card">
+                        <div>
+                            <div class="folder-icon">
+                                <i class="fa-regular fa-folder"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/dumi88571/Agriculture-app" target="_blank"
+                                        aria-label="View Agriculture Analysis on GitHub"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Agriculture Data Analysis</h3>
+                            <p class="project-desc">Comprehensive analysis of agricultural data for yield optimization
+                                using Pandas and Scikit-learn.</p>
+                        </div>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>ML</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 6: Car Price Prediction -->
+                    <div class="project-card">
+                        <div>
+                            <div class="folder-icon">
+                                <i class="fa-regular fa-folder"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/dumi88571/CAR-PRICE-PREDICTION-USING-DEEP-LEARNING"
+                                        target="_blank" aria-label="View Car Prediction on GitHub"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Car Price Prediction</h3>
+                            <p class="project-desc">Advanced deep learning model for predicting car prices based on
+                                multiple features and market data.</p>
+                        </div>
+                        <ul class="project-tech">
+                            <li>Deep Learning</li>
+                            <li>TensorFlow</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 7: Restaurant Optimization -->
+                    <div class="project-card">
+                        <div>
+                            <div class="folder-icon">
+                                <i class="fa-regular fa-folder"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/dumi88571/restaurant-operations" target="_blank"
+                                        aria-label="View Restaurant Opt on GitHub"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Restaurant Optimization App</h3>
+                            <p class="project-desc">Data-driven application for restaurant performance analysis, menu
+                                optimization, and customer insights.</p>
+                        </div>
+                        <ul class="project-tech">
+                            <li>React</li>
+                            <li>Python</li>
+                            <li>Analytics</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 8: Gold Mine Analytics -->
+                    <div class="project-card">
+                        <div>
+                            <div class="folder-icon">
+                                <i class="fa-regular fa-folder"></i>
+                                <div class="project-links">
+                                    <a href="https://github.com/dumi88571/gold-application" target="_blank"
+                                        aria-label="View Gold Mine App on GitHub"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Gold Mine Productivity Analyzer</h3>
+                            <p class="project-desc">Comprehensive analytics platform for gold mine operations,
+                                productivity tracking, and optimization.</p>
+                        </div>
+                        <ul class="project-tech">
+                            <li>Data Mining</li>
+                            <li>Tableau</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <div class="section-header" style="justify-content: center; margin-bottom: 2rem;" data-aos="fade-up">
+                    <span class="section-number">04.</span>
+                    <h2 class="section-title" style="width: auto; position: static;">What's Next?</h2>
+                </div>
+
+                <div class="contact-box" data-aos="zoom-in">
+                    <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Get In Touch</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.2rem;">
+                        I'm currently looking for new opportunities, and my inbox is always open. Whether you have a
+                        question or just want to say hi, I'll try my best to get back to you!
+                    </p>
+                    <a href="mailto:dumisanimabhugu29@gmail.com" class="btn"
+                        style="margin-top: 3rem; font-size: 1.2rem;" aria-label="Send Email">Say Hello</a>
+
+                    <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center;">
+                        <a href="tel:+919182579627" class="btn" style="font-size: 0.9rem; padding: 0.8rem 1.5rem;"
+                            aria-label="Call Me"><i class="fa-solid fa-phone"></i> Call</a>
+                        <a href="https://wa.me/919182579627" class="btn"
+                            style="font-size: 0.9rem; padding: 0.8rem 1.5rem;" aria-label="Chat on WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i> Chat</a>
+                    </div>
+                </div>
+            </section>
+
+            <footer
+                style="text-align: center; padding: 2rem; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
+                <p>Designed & Built by Dumisani Mabhugu</p>
+                <p>&copy; 2026</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false
+        });
+
+        // Active Link Switching
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll(".nav-link");
+
+        window.onscroll = () => {
+            var current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLi.forEach((li) => {
+                li.classList.remove("active");
+                if (li.getAttribute("href").includes(current)) {
+                    li.classList.add("active");
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>
