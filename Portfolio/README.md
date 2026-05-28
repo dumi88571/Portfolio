@@ -1,8 +1,4 @@
-# Dumisani Mabhugu | Professional Portfolio Hub & CV
 
-A premium, modern, fully responsive, and print-optimized professional portfolio website designed for **Computer Science and Data Science** roles. It integrates state-of-the-art interactive aesthetics, an dynamic projects gallery, and a beautifully structured, single-page printable CV.
-
----
 
 ## 👤 About Me & Background
 
@@ -28,53 +24,26 @@ When I am not writing code or analyzing datasets, I dedicate my time to:
 
 ---
 
-## 🌟 Key Features
 
-### 🎨 1. Dynamic On-the-Fly Theming
-The site includes a custom theme switcher floating widget (docks to the bottom-left on mobile for perfect ergonomics) allowing users to switch instantly between three high-end visual systems:
-*   💧 **Classy Glassmorphism (Default):** Premium dark mode hybrid featuring HSL tailwind-inspired deep ocean blue (`#0ea5e9`), teal (`#06b6d4`), and emerald green (`#10b981`) color variables, custom glass container backglows, and interactive cursor radial lighting.
-*   ⚡ **Neon Cyberpunk:** High-tech terminal-style theme with a retro console monospace font (`Fira Code`/`VT323`), neon cyan text, neon yellow accents, and flat glowing border parameters.
-*   🔨 **Neo-Brutalism:** High-contrast bold pop-art retro aesthetic with thick borders (`3px solid #121212`), strong flat drop shadows (`6px 6px 0px #121212`), outfit styling, and active vibrant color sheets.
-
-### ✍️ 2. Dynamic Typing Headline
-The hero card integrates an advanced JavaScript typing effect that rotates continuously between core roles (Data Scientist, Software Engineer, Machine Learning Engineer, Database Administrator, Data Analyst, Full-Stack Developer, BI Specialist, and Computer Science Professional) to capture recruiters' attention.
-
-### 🖨️ 3. Print-Optimized Single-Page CV (`cv.html`)
-The printable resume has been completely redesigned using a modern **two-column sidebar layout** to fit **perfectly on exactly one A4 page** when saved as a PDF or printed:
-*   **Left Column (Sidebar):** Houses Technical Skills (Languages, AI/ML, CS Tools, Data Analytics, and MS Office) and Education history (Adikavi Nannaya University BSc in Data Science and Gaza High School O/A-Levels).
-*   **Right Column (Main Panel):** Houses a concise professional summary, freelance chronological history, 6 key projects, and 8 certifications.
-*   **Print Stylesheets (`@media print`):** Formatted with custom constraints that adjust print margins, reduce font sizes to a crisp `7.5pt`, collapse padding variables, and hide screen navigation buttons, guaranteeing a flawless one-sheet export with zero browser-margin spillover.
-
-### 📱 4. Fully Mobile-Responsive
-The website adjusts seamlessly to any phone, tablet, or mobile screen:
-*   **Sticky Mobile Nav:** Converts to a responsive layout with centered wrapping links to prevent text clipping.
-*   **Touch-Friendly Switcher:** Anchors safely at the bottom-left as an easy-to-use toggle widget, leaving the bottom-right completely clear for the scroll-to-top button.
-*   **Collapsing Grids:** Grid components stack into robust single-column columns with snug, comfortable mobile padding.
-
----
 
 ## 📂 Repository File Structure
 
 ```text
-├── index.html                  # Live responsive homepage (Root)
-├── cv.html                     # Printable single-page CV (Root)
-├── advanced-style.css          # Custom styling stylesheet with theme tokens (Root)
-├── IMG_20251104_121210434.jpg # Profile photo asset (Root)
-├── README.md                   # Project documentation
+├── index.html                  
+├── cv.html                   
+├── advanced-style.css          
+├── IMG_20251104_121210434.jpg 
+├── README.md                   
 │
-└── Portfolio/                  # Standalone self-contained package
-    ├── index.html              # Synced homepage
-    ├── cv.html                 # Synced printable CV
-    ├── advanced-style.css      # Synced responsive stylesheet
+└── Portfolio/                 
+    ├── index.html              
+    ├── cv.html                 
+    ├── advanced-style.css      
     ├── IMG_20251104_121210434.jpg
     └── README.md
 ```
 
----
 
-## 📂 Project Descriptions (Simple & Jargon-Free)
-
-Here is a straightforward explanation of all **13 projects** in the portfolio, written in simple, everyday English so that anyone can immediately understand what they do:
 
 ### 🧠 Machine Learning & AI
 
@@ -148,27 +117,9 @@ Here is a straightforward explanation of all **13 projects** in the portfolio, w
 
 ---
 
-## 💻 How to View Locally
-
-Simply open `index.html` in any modern web browser (Google Chrome, Microsoft Edge, Safari, or Mozilla Firefox):
-1.  Navigate to your local repository directory.
-2.  Double-click the **`index.html`** file.
-3.  *Optional:* If using VS Code, right-click `index.html` and select **Open with Live Server** for real-time live preview.
-
 ---
 
-## 📤 Quick Deployment Guide (Render)
 
-Since this project consists of pure static web assets, you can host it globally on Render for free:
-1.  Push this directory to a new repository on your **GitHub** account.
-2.  Log in to [Render.com](https://render.com) using your GitHub credentials.
-3.  Click **New +** in the top-right and select **Static Site**.
-4.  Connect your repository.
-5.  Configure Settings:
-    *   **Name:** `dumisani-mabhugu`
-    *   **Build Command:** *Leave Blank*
-    *   **Publish Directory:** `Portfolio` (or leave blank if deploying root files)
-6.  Click **Create Static Site**. Render will deploy your live site instantly!
 
 ---
 
