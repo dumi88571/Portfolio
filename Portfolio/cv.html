@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumisani Mabhugu | CV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #0f172a; /* Slate 900 */
+      --secondary: #475569; /* Slate 600 */
+      --text: #1e293b; /* Slate 800 */
+      --accent: #0284c7; /* Light Blue 600 */
+      --bg: #f8fafc;
+      --border: #cbd5e1;
+      --header-color: #1e40af; /* Professional deep blue */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.35;
+      background-color: var(--bg);
+      padding: 1.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* CV Container */
+    .cv-container {
+      max-width: 950px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2rem 2.8rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 6px;
+    }
+
+    /* Header Styling */
+    header {
+      text-align: center;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.8rem;
+    }
+
+    .name {
+      font-family: 'Lora', serif;
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--header-color);
+      margin-bottom: 0.2rem;
+      letter-spacing: -0.5px;
+    }
+
+    .job-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--secondary);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-info {
+      font-size: 0.82rem;
+      color: var(--secondary);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 0.4rem;
+    }
+
+    .contact-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .contact-info span:not(:last-child)::after {
+      content: "•";
+      margin-left: 0.8rem;
+      color: var(--border);
+    }
+
+    /* CV Grid Layout */
+    .cv-layout {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 1.8rem;
+      margin-top: 1.2rem;
+    }
+
+    .cv-sidebar {
+      border-right: 1px solid var(--border);
+      padding-right: 1.2rem;
+    }
+
+    .cv-main {
+      padding-left: 0.2rem;
+    }
+
+    /* Section Styling */
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--header-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--header-color);
+      padding-bottom: 0.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar-section {
+      margin-bottom: 1.2rem;
+    }
+
+    .main-section {
+      margin-bottom: 1.2rem;
+    }
+
+    /* Technical Skills Sidebar */
+    .skills-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .skill-group {
+      font-size: 0.8rem;
+    }
+
+    .skill-header {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.05rem;
+      font-size: 0.82rem;
+    }
+
+    .skill-list {
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    /* Education Sidebar */
+    .education-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.88rem;
+    }
+
+    .edu-school {
+      font-weight: 500;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-style: italic;
+    }
+
+    .edu-details {
+      font-size: 0.75rem;
+      color: var(--secondary);
+      line-height: 1.25;
+      margin-top: 0.1rem;
+    }
+
+    /* Professional Summary */
+    .summary-text {
+      text-align: justify;
+      font-size: 0.8rem;
+      line-height: 1.35;
+    }
+
+    /* Professional Experience */
+    .block-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.15rem;
+    }
+
+    .block-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .block-date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .experience-list {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
+
+    .experience-list li {
+      margin-bottom: 0.15rem;
+      color: var(--text);
+      text-align: justify;
+    }
+
+    /* Projects List */
+    .projects-compact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .project-compact-item {
+      font-size: 0.78rem;
+      line-height: 1.35;
+      color: var(--text);
+      text-align: justify;
+    }
+
+    /* Certifications Grid */
+    .cert-grid-compact {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.3rem 1rem;
+    }
+
+    .cert-compact-item {
+      font-size: 0.78rem;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 0.05rem;
+    }
+
+    .cert-compact-title {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .cert-compact-issuer {
+      color: var(--secondary);
+      font-style: italic;
+      font-size: 0.72rem;
+    }
+
+    /* Actions */
+    .actions {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: #000;
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      margin-left: 1rem;
+    }
+
+    .btn-outline:hover {
+      background: #e2e8f0;
+      text-decoration: none;
+    }
+
+    /* Print media overrides */
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 7.5pt !important;
+        line-height: 1.3 !important;
+      }
+
+      .actions {
+        display: none;
+      }
+
+      .cv-container {
+        padding: 0.25in !important;
+        box-shadow: none;
+        max-width: 100%;
+        width: 100%;
+        border-radius: 0;
+        margin: 0 !important;
+      }
+
+      .cv-layout {
+        display: grid;
+        grid-template-columns: 210px 1fr !important;
+        gap: 1.2rem !important;
+        margin-top: 0.6rem !important;
+      }
+
+      .sidebar-section {
+        margin-bottom: 0.8rem !important;
+      }
+
+      .main-section {
+        margin-bottom: 0.6rem !important;
+      }
+
+      .experience-list li {
+        margin-bottom: 0.05rem !important;
+      }
+
+      .projects-compact-list {
+        gap: 0.2rem !important;
+      }
+
+      .cert-grid-compact {
+        gap: 0.2rem 0.6rem !important;
+      }
+
+      .section-title {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.3rem !important;
+        padding-bottom: 0.1rem !important;
+      }
+
+      header {
+        margin-bottom: 0.5rem !important;
+        padding-bottom: 0.3rem !important;
+      }
+
+      .name {
+        font-size: 1.8rem !important;
+      }
+
+      .job-title {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.2rem !important;
+      }
+
+      .contact-info {
+        font-size: 0.7rem !important;
+        gap: 0.4rem !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cv-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .cv-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+      }
+
+      .cv-container {
+        padding: 1.5rem;
+      }
+
+      .cert-grid-compact {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Screen Actions (Hidden on Print) -->
+  <div class="actions">
+    <button class="btn" onclick="window.print()"><i class="fa-solid fa-download"></i> Save as PDF</button>
+    <a href="index.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+  </div>
+
+  <div class="cv-container">
+
+    <!-- Header Section -->
+    <header>
+      <h1 class="name">Dumisani Mabhugu</h1>
+      <div class="job-title">Computer Science Professional | Data Scientist</div>
+      <div class="contact-info">
+        <span><i class="fa-solid fa-envelope"></i> <a href="mailto:dumisanimabhugu29@gmail.com">dumisanimabhugu29@gmail.com</a></span>
+        <span><i class="fa-solid fa-phone"></i> +263771691731</span>
+        <span><i class="fa-solid fa-location-dot"></i> Harare, Zimbabwe</span>
+        <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/dumisani-mabhugu-39ab3a2a5" target="_blank">linkedin.com/in/dumisani-mabhugu</a></span>
+        <span><i class="fa-brands fa-github"></i> <a href="https://github.com/dumi88571" target="_blank">github.com/dumi88571</a></span>
+      </div>
+    </header>
+
+    <div class="cv-layout">
+      <!-- Left Sidebar (Skills & Education) -->
+      <aside class="cv-sidebar">
+        <!-- Technical Skills -->
+        <section class="sidebar-section">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="skills-block">
+            <div class="skill-group">
+              <div class="skill-header">Languages</div>
+              <div class="skill-list">Python, R, SQL, JavaScript, HTML/CSS, C Programming</div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-header">AI & Machine Learning</div>
+              <div class="skill-list">Predictive Analytics, Deep Learning, NLP, TensorFlow, PyTorch, Scikit-learn</div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-header">CS & Tools</div>
+              <div class="skill-list">Git, Jupyter, VS Code, Database Design, Relational Architecture, Agile</div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-header">Data & Analytics</div>
+              <div class="skill-list">Tableau, Power BI, Pandas, NumPy, Matplotlib, Seaborn, Data Mining</div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-header">Microsoft Proficiency</div>
+              <div class="skill-list">MS Word, Excel, PowerPoint</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="sidebar-section">
+          <h2 class="section-title">Education</h2>
+          <div class="education-block">
+            <div class="education-item">
+              <div class="edu-degree">BSc in Data Science</div>
+              <div class="edu-school">Adikavi Nannaya University</div>
+              <div class="edu-details">Core study in Software Engineering, Programming, Machine Learning, and Databases.</div>
+            </div>
+            <div class="education-item">
+              <div class="edu-degree">O-Level & A-Level</div>
+              <div class="edu-school">Gaza High School (2022)</div>
+              <div class="edu-details">Focused on natural sciences and agricultural topics (Biology, Geography, Crop Science).</div>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Right Main Content (Summary, Experience, Projects, Certs) -->
+      <main class="cv-main">
+        <!-- Professional Summary -->
+        <section class="main-section">
+          <h2 class="section-title">Professional Summary</h2>
+          <p class="summary-text">
+            Computer Science and Data Science professional specializing in software development, machine learning, and advanced analytics. Experienced in building optimized SQL databases, deploying clean Flask APIs, and training predictive models. Dedicated to translating complex datasets into actionable visual insights and reliable software systems.
+          </p>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="main-section">
+          <h2 class="section-title">Professional Experience</h2>
+          <div class="block-item">
+            <div class="block-header">
+              <div class="block-title">Freelance Data Scientist & Developer</div>
+              <div class="block-date">Freelance & Academic Projects</div>
+            </div>
+            <ul class="experience-list">
+              <li>Built and deployed simple web apps using Flask to make machine learning models interactive and easy for clients to try out.</li>
+              <li>Created predictive models for crops and healthcare data, working with real datasets to get practical insights.</li>
+              <li>Set up and structured SQL databases to handle project data cleanly and make search queries faster.</li>
+              <li>Designed interactive dashboards in Tableau and Power BI so project partners could easily visualize and understand their key metrics.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Software & Data Projects -->
+        <section class="main-section">
+          <h2 class="section-title">Key Projects</h2>
+          <div class="projects-compact-list">
+            <div class="project-compact-item">
+              <strong>CLV & Churn Analytics Dashboard</strong> (XGBoost, Flask) – Built predictive app modeling customer lifetime value and churn risk to help automate retention marketing.
+            </div>
+            <div class="project-compact-item">
+              <strong>Automatic Student Attendance System</strong> (OpenCV, SQLite) – Designed a real-time classroom attendance system using facial recognition to log records securely.
+            </div>
+            <div class="project-compact-item">
+              <strong>Deep Learning Car Price Predictor</strong> (TensorFlow, Python) – Trained a deep neural network to estimate used car prices by analyzing multi-variable market datasets.
+            </div>
+            <div class="project-compact-item">
+              <strong>Enterprise Financial Sentiment Analysis</strong> (Scikit-Learn, NLP) – Developed an NLP classifier to read financial documents and automatically label market sentiment scores.
+            </div>
+            <div class="project-compact-item">
+              <strong>Restaurant Operations Intelligence App</strong> (Python, Data Analytics) – Developed a data-driven web app to analyze operational sales records and track profitability metrics.
+            </div>
+            <div class="project-compact-item">
+              <strong>Mine Productivity Analyzer</strong> (Tableau, Data Mining) – Designed visual reporting tools and Tableau dashboards to highlight operational efficiency and bottleneck trends.
+            </div>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="main-section" style="margin-bottom: 0;">
+          <h2 class="section-title">Certifications</h2>
+          <div class="cert-grid-compact">
+            <div class="cert-compact-item">
+              <span class="cert-compact-title">Python for Data Science</span>
+              <span class="cert-compact-issuer">Infosys Springboard</span>
+            </div>
+            <div class="cert-compact-item">
+              <span class="cert-compact-title">AI and Machine Learning</span>
+              <span class="cert-compact-issuer">Ulearn</span>
+            </div>
+            <div class="cert-compact-item">
+              <span class="cert-compact-title">Power BI</span>
+              <span class="cert-compact-issuer">Ulearn</span>
+            </div>
+            <div class="cert-compact-item">
+              <span class="cert-compact-title">Python for DS Bootcamp</span>
+              <span class="cert-compact-issuer">Online Bootcamp</span>
+            </div>
+            <div class="cert-compact-item">
+              <span class="cert-compact-title">C Programming Essentials</span>
+              <span class="cert-compact-issuer">CISCO Academy</span>
+            </div>
+            <div class="cert-compact-item">
+              <span class="cert-compact-title">Cloud Computing</span>
+              <span class="cert-compact-issuer">Swayam</span>
+            </div>
+            <div class="cert-compact-item">
+              <span class="cert-compact-title">Business Writing</span>
+              <span class="cert-compact-issuer">edX</span>
+            </div>
+            <div class="cert-compact-item">
+              <span class="cert-compact-title">Oracle Competitor</span>
+              <span class="cert-compact-issuer">Oracle</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+  </div>
+</body>
+
+</html>
